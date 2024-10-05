@@ -1,0 +1,228 @@
+import React from 'react';
+import { Carousel } from 'react-bootstrap';
+
+const App = () => {
+  return (
+    <div className="h-[5027px] bg-white">
+      {/* Navbar */}
+      <div className="navbar bg-[#043873] px-5 py-3">
+        <div className="navbar-brand text-white flex items-center">
+          <span className="text-2xl font-bold">nav</span>
+          <img className="h-14 ml-2" src="https://via.placeholder.com/41x58" alt="Logo" />
+          <span className="text-2xl font-bold">areer</span>
+        </div>
+        <div className="navbar-nav flex-grow text-white text-lg font-bold">
+          <a className="nav-link" href="#">Trang chủ</a>
+          <a className="nav-link" href="#">Hệ thống bài test</a>
+          <a className="nav-link" href="#">Khoá học</a>
+          <a className="nav-link" href="#">Tài nguyên hỗ trợ</a>
+        </div>
+        <div className="navbar-buttons">
+          <button className="btn btn-outline-light mr-2">Đăng nhập</button>
+          <button className="btn btn-primary">Đăng ký</button>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <div className="hero-section container mt-5">
+        <div className="row">
+          <div className="col-md-6">
+            <h1 className="text-6xl font-bold">
+              <span className="text-[#77f2a1]">Khám phá tiềm năng,</span>
+              <span className="text-[#4f76f6]"> xây dựng sự nghiệp</span>
+            </h1>
+            <p className="text-xl mt-3">Tạo ra một môi trường khám phá, học tập và phát triển liên tục, giúp mọi người đạt được mục tiêu nghề nghiệp của mình.</p>
+            <button className="btn btn-primary mt-5 px-5 py-3">THỰC HIỆN BÀI TEST</button>
+          </div>
+          {/* Hero image (Replace with actual image/illustration) */}
+          <div className="col-md-6">
+            {/* Add image/illustration here */}
+          </div>
+        </div>
+      </div>
+
+      {/* Section 1 */}
+      <div className="section-1 container bg-white/50 rounded-lg p-5 mt-5">
+        <div className="row align-items-center">
+          <div className="col-md-4">
+            {/* Replace with actual illustration */}
+            <div className="illustration">{/* Add illustration here */}</div>
+          </div>
+          <div className="col-md-8">
+            <h2 className="text-4xl font-bold">
+              <span className="text-[#043873]">Bạn gặp khó khăn</span>
+              <span className="text-[#4f76f6]"> trong việc chọn nghề?</span>
+            </h2>
+            <p className="text-xl mt-3">Giới trẻ hiện nay gặp khó khăn trong việc chọn nghề do thiếu thông tin, định hướng và sự tư vấn chuyên nghiệp.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 2 */}
+      <div className="section-2 container bg-[#cfd7d9]/20 rounded-lg p-5 mt-5">
+        <div className="row align-items-center">
+          <div className="col-md-8">
+            <h2 className="text-4xl font-bold">
+              <span className="text-[#043873]">Không biết điểm mạnh là gì? </span>
+              <span className="text-[#4f76f6]">Mơ hồ về tương lai?</span>
+            </h2>
+            <p className="text-xl mt-3">Giới trẻ hiện nay gặp khó khăn trong việc chọn nghề do thiếu thông tin, định hướng và sự tư vấn chuyên nghiệp.</p>
+          </div>
+          <div className="col-md-4">
+            {/* Replace with actual illustration */}
+            <div className="illustration">{/* Add illustration here */}</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 3 */}
+      <div className="section-3 container bg-white/50 rounded-lg p-5 mt-5">
+        <div className="row align-items-center">
+          <div className="col-md-4">
+            {/* Replace with actual illustration */}
+            <div className="illustration">{/* Add illustration here */}</div>
+          </div>
+          <div className="col-md-8">
+            <h2 className="text-4xl font-bold">
+              <span className="text-[#043873]">Đã có tư vấn nghề nghiệp </span>
+              <br />
+              <span className="text-[#4f76f6]">cá nhân hóa từ NavCareer</span>
+            </h2>
+            <p className="text-xl mt-3">Chúng tôi mong muốn tạo ra một nền tảng giúp mọi người nhận được sự tư vấn chuyên nghiệp và cá nhân hóa, giúp họ tìm thấy con đường sự nghiệp phù hợp nhất.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Courses Section */}
+      <div className="courses-section container mt-5">
+        <h2 className="text-4xl font-bold text-[#043873] mb-4">
+          Với các khoá học chất lượng
+        </h2>
+        <p className="text-lg text-[#585859] mb-5">Học từ những chuyên gia hàng đầu và nhận được sự hỗ trợ tận tình với các khóa học chất lượng của chúng tôi. Thành công trong tầm tay với những kiến thức và kỹ năng thực tiễn mà bạn sẽ nhận được từ các khóa học này!</p>
+
+        {/* Course Carousel */}
+        <Carousel indicators={false} controls={false}> 
+          {/* Course Item 1 */}
+          <Carousel.Item>
+            <div className="card border border-[#f1f1f3] rounded-xl p-5">
+              <img src="https://via.placeholder.com/620x380" className="card-img-top rounded-lg" alt="Course 1" />
+              <div className="card-body">
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <div className="badges">
+                    <span className="badge badge-light border border-[#f1f1f3] mr-2 px-3 py-2">4 tuần</span>
+                    <span className="badge badge-light border border-[#f1f1f3] px-3 py-2">Người mới</span>
+                  </div>
+                  <span className="text-[#043873] text-xl font-medium">Bởi John Smith</span>
+                </div>
+                <h5 className="card-title text-[#043873] text-2xl font-semibold">Cơ bản về thiết kế web</h5>
+                <p className="card-text text-[#4c4c4c] text-lg">Tìm hiểu những nguyên tắc cơ bản của thiết kế web, bao gồm HTML, CSS và các nguyên tắc thiết kế đáp ứng. Phát triển các kỹ năng để tạo ra các trang web hấp dẫn về mặt hình ảnh và thân thiện với người dùng.</p>
+                <button className="btn btn-secondary mt-3 px-5 py-3">Tham gia ngay</button>
+              </div>
+            </div>
+          </Carousel.Item>
+          {/* Repeat for other course items */}
+        </Carousel>
+        {/* Carousel navigation dots */}
+        <div className="carousel-indicators mt-3">
+          <button className="bg-[#4f76f6] rounded-full w-3 h-3 mr-2"></button>
+          <button className="bg-[#4f76f6]/50 rounded-full w-3 h-3 mr-2"></button>
+          <button className="bg-[#4f76f6]/50 rounded-full w-3 h-3"></button>
+        </div>
+      </div>
+      
+      {/* Experts Section */}
+      <div className="experts-section container mt-5">
+        <h2 className="text-4xl font-bold text-[#043873] mb-4">
+          Từ những chuyên gia hàng đầu 
+        </h2>
+        <p className="text-lg text-[#585859] mb-5">Học hỏi từ những chuyên gia hàng đầu, những người đã đạt được thành công vượt trội trong ngành của họ. Các khóa học tại NavCareer được thiết kế bởi những người có kinh nghiệm thực tiễn và kiến thức sâu rộng, giúp bạn nâng cao kỹ năng và kiến thức một cách hiệu quả nhất. Đừng bỏ lỡ cơ hội học hỏi từ những người giỏi nhất!</p>
+
+        <Carousel indicators={false} controls={false}>
+          {/* Expert Item 1 */}
+          <Carousel.Item>
+            <div className="card rounded-lg border-0">
+              <img src="https://via.placeholder.com/308x305" className="card-img-top" alt="Expert 1" />
+              <div className="card-body bg-[#cfd7d9]/20 text-center p-4">
+                <h5 className="card-title text-black text-xl font-normal">John S.<br/>Sergent</h5>
+                <p className="card-text text-[#4c4c4c] text-sm">Trưởng phòng Khoa học dữ liệu</p>
+              </div>
+            </div>
+          </Carousel.Item>
+          {/* Repeat for other expert items */}
+        </Carousel>
+        {/* Carousel navigation dots */}
+        <div className="carousel-indicators mt-3">
+          <button className="bg-[#4f76f6] rounded-full w-3 h-3 mr-2"></button>
+          <button className="bg-[#4f76f6]/50 rounded-full w-3 h-3 mr-2"></button>
+          <button className="bg-[#4f76f6]/50 rounded-full w-3 h-3"></button>
+        </div>
+      </div>
+      {/* Subscription form */}
+      <div className="subscription-form container mt-5">
+        <div className="row">
+          <div className="col-md-6">
+            {/* Replace with actual illustration */}
+            <div className="illustration">{/* Add illustration here */}</div>
+          </div>
+          <div className="col-md-6">
+            <h2 className="text-2xl font-bold text-[#003293] mb-3">Đăng ký để trải nghiệm các khoá học tuyệt vời cùng</h2>
+            <div className="brand-logo mb-4 flex items-center">
+              <span className="text-6xl font-bold text-[#043873]">nav</span>
+              <img className="h-20 mx-3" src="https://via.placeholder.com/85x124" alt="Logo" />
+              <span className="text-6xl font-bold text-[#043873]">areer</span>
+            </div>
+            <input type="email" className="form-control border border-[#043873] mb-3" placeholder="Email" />
+            <button className="btn btn-primary w-100">Đăng ký ngay!</button>
+          </div>
+        </div>
+      </div>
+
+
+      {/* Footer */}
+      <div className="footer bg-[#043873] p-5 mt-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3">
+              <div className="brand-logo mb-4 text-white flex items-center">
+                <span className="text-2xl font-bold">nav</span>
+                <img className="h-14 ml-2" src="https://via.placeholder.com/41x58" alt="Logo" />
+                <span className="text-2xl font-bold">areer</span>
+              </div>
+              <div className="contact-info text-white">
+                <p className="mb-2"><i className="fas fa-envelope mr-2"></i> hello@skillbridge.com</p>
+                <p className="mb-2"><i className="fas fa-phone mr-2"></i> +91 91813 23 2309</p>
+                <p><i className="fas fa-map-marker-alt mr-2"></i> Somewhere in the World</p>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <h4 className="text-white text-xl font-semibold mb-3">Trang chủ</h4>
+              <ul className="list-unstyled text-white">
+                <li className="mb-2">Hệ thống bài test</li>
+                <li className="mb-2">Khoá học</li>
+                <li>Tài nguyên hỗ trợ</li>
+              </ul>
+            </div>
+            <div className="col-md-2">
+              <h4 className="text-white text-xl font-semibold mb-3">Thông tin chi tiết</h4>
+              <ul className="list-unstyled text-white">
+                <li className="mb-2">Công ty</li>
+                <li className="mb-2">Sứ mệnh</li>
+                <li>Mục tiêu</li>
+              </ul>
+            </div>
+            <div className="col-md-3">
+              <h4 className="text-white text-xl font-semibold mb-3">Kết nối với chúng tôi</h4>
+              <div className="social-icons">
+                <a href="#" className="btn btn-dark rounded-lg mr-2"><i className="fab fa-facebook-f"></i></a>
+                <a href="#" className="btn btn-dark rounded-lg mr-2"><i className="fab fa-twitter"></i></a>
+                <a href="#" className="btn btn-dark rounded-lg"><i className="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;

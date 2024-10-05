@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@iconify-icons/lucide": "^1.2.135",
+    "@iconify/react": "^5.0.2",
+    "bootstrap": "^5.3.3",
+    "lucide-react": "^0.446.0",
+    "react-bootstrap-icons": "^1.11.4",
+    "styled-components": "^6.1.13"
+  }
+}

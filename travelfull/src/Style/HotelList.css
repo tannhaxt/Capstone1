@@ -1,0 +1,9 @@
+.hotel-card-list{
+    max-width: 821px;
+    margin: 'o auto';
+}
+@media (max-width: 768px) {  /*  Điều chỉnh breakpoint nếu cần */ 
+    .hotel-card img {
+      height: 200px; /*  Chiều cao ảnh trên thiết bị nhỏ hơn */ 
+    }
+  }

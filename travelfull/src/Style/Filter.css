@@ -1,0 +1,54 @@
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+  }
+  
+  .card-filter {
+    margin-bottom: 35px;
+  }
+  
+  .card-header h6 {
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .card-body {
+    margin-top: 10px;
+  }
+  
+  .card-body .form-check-label {
+    color: #474A49;
+    font-size: 16px;
+  }
+  
+  .form-check-input {
+    width: 21px;
+    height: 21px;
+    background: #FAFBFA;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: none;
+  }
+  
+  .form-range {
+    width: 100%;
+    height: 10px;
+  }
+  
+  .slider-range {
+    position: absolute;
+    top: 0;
+    height: 6px;
+    background-color: #2E3192; /* Màu  đen  cho  khoảng  giá  được  chọn */
+  }
+  
+  .price-range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  

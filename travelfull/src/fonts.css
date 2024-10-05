@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'SVN-Gilroy-Light';
+  src: url('./fonts/SVN-Gilroy\ Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SVN-Gilroy-Regular';
+  src: url('./fonts/SVN-Gilroy\ Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SVN-Gilroy-Medium';
+  src: url('./fonts/SVN-Gilroy\ Medium.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SVN-Gilroy-SemiBold';
+  src: url('./fonts/SVN-Gilroy\ SemiBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SVN-Gilroy-Bold';
+  src: url('./fonts/SVN-Gilroy\ Bold.otf') format('truetype');
+}
+
+body {
+  font-family: 'SVN-Gilroy', sans-serif;
+}
+
+/* H1 Styles */
+h1 {
+  font-size: 64px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+
+h1.light {
+  font-weight: 300 !important; /* Light */
+}
+
+h1.regular {
+  font-weight: 400 !important; /* Regular */
+}
+
+h1.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+h1.bold {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* H2 Styles */
+h2 {
+  font-size: 48px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+
+h2.light {
+  font-weight: 300 !important; /* Light */
+}
+
+h2.regular {
+  font-weight: 400 !important; /* Regular */
+}
+
+h2.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+h2.bold {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* H3 Styles */
+h3 {
+  font-size: 40px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+
+h3.light {
+  font-weight: 300 !important; /* Light */
+}
+
+h3.regular {
+  font-weight: 400 !important; /* Regular */
+}
+
+h3.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+h3.bold {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* H4 Styles */
+h4 {
+  font-size: 32px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+
+h4.light {
+  font-weight: 300 !important; /* Light */
+}
+
+h4.regular {
+  font-weight: 400 !important; /* Regular */
+}
+
+h4.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+h4.bold {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* H5 Styles */
+h5 {
+  font-size: 24px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+
+h5.light {
+  font-weight: 300 !important; /* Light */
+}
+
+h5.regular {
+  font-weight: 400 !important; /* Regular */
+}
+
+h5.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+h5.bold {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* H6 Styles */
+h6 {
+  font-size: 16px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+
+h6.light {
+  font-weight: 300 !important; /* Light */
+}
+
+h6.regular {
+  font-weight: 400 !important; /* Regular */
+}
+
+h6.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+h6.bold {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* Small Text Styles */
+.small {
+  font-size: 13px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+.small2 {
+  font-size: 14px !important;
+  font-weight: 600 !important; /* Semibold mặc định */
+}
+
+.small.light {
+  font-weight: 300 !important; /* Light */
+}
+
+.small.regular {
+  font-weight: 400 !important; /* Regular */
+}
+
+.small.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+.small.bold {
+  font-weight: 700 !important; /* Bold */
+}
+
+/* Paragraph Styles */
+p {
+  font-size: 16px !important;
+  font-weight: 400 !important; /* Regular mặc định */
+}
+
+p.light {
+  font-weight: 300 !important; /* Light */
+}
+
+p.medium {
+  font-weight: 500 !important; /* Medium */
+}
+
+p.semibold {
+  font-weight: 600 !important; /* Semibold */
+}
+
+p.bold {
+  font-weight: 700 !important; /* Bold */
+}

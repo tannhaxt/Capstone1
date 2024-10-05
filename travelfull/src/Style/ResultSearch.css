@@ -1,0 +1,60 @@
+/* To make sure all content (except footer) has 112px padding on the sides */
+.result-search-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding: 0 112px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .search-content {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Filter Card section on the left */
+  .filter-card {
+    flex: 0 0 25%;
+    margin-right: 20px;
+  }
+  
+  /* Hotel search section on the right */
+  .hotel-section {
+    flex: 1;
+  }
+  
+  /* Make it responsive */
+  @media (max-width: 1200px) {
+    .main-content {
+      padding: 0 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  
+    .filter-card {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .hotel-section {
+      width: 100%;
+    }
+  }
+  
+  .footer {
+    margin-top: 50px;
+  }
+  

@@ -1,0 +1,50 @@
+/* FilterBar Styles */
+.filter-bar {
+    padding: 20px 0;
+  }
+  
+  .nav-underline .nav-link {
+    padding-bottom: 14px; /*  Khoảng  cách  14px  giữa  chữ  và  đường  line  */ 
+    border: none; /*  Loại  bỏ  border  mặc  định  của  nav-link  */
+    box-shadow: none;
+    background-color: transparent; /*  Loại  bỏ  background  mặc  định  của  nav-link  */
+    color: #474A49;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out; 
+    position: relative; /*  Để  đặt  đường  line  divide  */ 
+  }
+  
+  .nav-underline .nav-link::before {  /*  Tạo  đường  line  divide  */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+  
+  .nav-underline .nav-link.active {
+    background-color: transparent;
+    border-bottom: none; /* Loại bỏ border bottom mặc định */ 
+    color: #2E3192;
+  }
+  
+  .nav-underline .nav-link.active::before {  /*  Tạo  stroke  khi  active  */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #2E3192;
+    border-radius: 10px;
+  }
+  
+  .nav-underline .nav-link:hover {
+    color: #2E3192;
+  }
+  .filter-line { /*  Style  cho  đường  line  */ 
+    height: 1px;
+    background-color: #E0E0E0;  
+    margin-top: -2px;  /*  Điều  chỉnh  vị  trí  cho  khớp  với   nav-link  */ 
+  }
