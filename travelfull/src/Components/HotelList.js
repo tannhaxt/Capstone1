@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { StarFill } from 'react-bootstrap-icons'; 
 import RosamiaImage from "../Images/Rosamia.jpg";
-import BookingLogo from "../Images/Booking.png"; // Thay đường dẫn đến logo Booking
+import BookingLogo from "../Images/Booking.png"; // Path to partner logo
 import "../Style/HotelList.css";
 
 const HotelList = () => {
@@ -23,52 +23,65 @@ const HotelList = () => {
       name: "Khách sạn Furama Resort Đà Nẵng",
       rating: 4.5,
       reviews: 150,
-      imageUrl: "https://via.placeholder.com/301x250", // Thay bằng hình ảnh thực tế
+      imageUrl: "https://via.placeholder.com/301x250", // Placeholder image
       price: "2.500.000",
       beds: 2,
       bathrooms: 1,
       area: "45m2",
       capacity: 4,
-      partnerLogo: BookingLogo,  // Thay bằng logo đối tác
+      partnerLogo: BookingLogo,  
     },
-    
-    // ... thêm dữ liệu khách sạn khác
+    // More hotel data here...
   ];
 
   return (
     <div className="hotel-card-list" style={{ maxWidth: '821px', margin: '0 auto' }}> 
-    {hotels.map((hotel, index) => (
-      <div key={index} className="hotel-card mb-4 rounded shadow-sm p-3">
-        <Row>
-          <Col md={4} className="mb-3 mb-md-0">
-            <div style={{ width: '100%', height: '270px', overflow: 'hidden', borderRadius: '8px' }}>  {/* Container cho ảnh */}
-              <img 
-                src={hotel.imageUrl} 
-                alt={hotel.name} 
-                className="img-fluid w-100" 
-                style={{ objectFit: 'cover', height: '100%' }}
-              />
-            </div>
-          </Col>
+      {hotels.map((hotel, index) => (
+        <div key={index} className="hotel-card mb-4 rounded shadow-sm p-3">
+          <Row>
+            <Col md={4} className="mb-3 mb-md-0">
+              <div style={{ width: '100%', height: '270px', overflow: 'hidden', borderRadius: '8px' }}>
+                <img 
+                  src={hotel.imageUrl} 
+                  alt={hotel.name} 
+                  className="img-fluid w-100" 
+                  style={{ objectFit: 'cover', height: '100%' }}
+                />
+              </div>
+            </Col>
+
             <Col md={8}>
               <Row>
                 <Col md={12} className="mb-2"> 
-                  <h5 className="mb-0" style={{ color: '#1C1D58', fontSize: '24px', fontFamily: 'SVN-Gilroy', fontWeight: '700' }}>{hotel.name}</h5>
+                  <h5 className="mb-0" style={{ color: '#1C1D58', fontSize: '24px', fontFamily: 'SVN-Gilroy', fontWeight: '700' }}>
+                    {hotel.name}
+                  </h5>
                 </Col>
                 <Col md={12} className="d-flex align-items-center"> 
                   {[...Array(5)].map((star, i) => (
-                    <StarFill key={i} className="star-icon" style={{ color: i < hotel.rating ? '#248232' : '#ccc' }} />
+                    <StarFill 
+                      key={i} 
+                      className="star-icon" 
+                      style={{ color: i < Math.floor(hotel.rating) ? '#248232' : '#ccc' }} 
+                    />
                   ))}
-                  <span className="ms-2" style={{ color: '#474A49', fontSize: '16px' }}>{hotel.rating}</span>
-                  <span className="ms-2" style={{ color: '#474A49', fontSize: '16px' }}>({hotel.reviews} reviews)</span>
+                  <span className="ms-2" style={{ color: '#474A49', fontSize: '16px' }}>
+                    {hotel.rating.toFixed(2)}
+                  </span>
+                  <span className="ms-2" style={{ color: '#474A49', fontSize: '16px' }}>
+                    ({hotel.reviews} reviews)
+                  </span>
                 </Col>
               </Row>
 
-              <div className="d-flex align-items-center mt-2"> 
-                <img src={hotel.partnerLogo} alt="Partner Logo" minWidth="120" height="60" />
+              <div className="d-flex align-items-center mt-2">
+                <img src={hotel.partnerLogo} alt="Partner Logo" style={{ width: '120px', height: '60px' }} />
               </div>
 
-              <h4 className="mb-3" style={{ color: '#2E3192', fontSize: '32px', fontFamily: 'SVN-Gilroy', fontWeight: '600' }}>{hotel.price} VNĐ</h4>
+              <h4 className="mb-3" style={{ color: '#2E3192', fontSize: '32px', fontFamily: 'SVN-Gilroy', fontWeight: '600' }}>
+                {hotel.price} VNĐ
+              </h4>
+              
               <Row className="hotel-details">
                 <Col xs={6} md={3} className="mb-2">
                   <p className="text-muted">Số giường</p>

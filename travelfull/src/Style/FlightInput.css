@@ -1,0 +1,80 @@
+.input-container {
+  display: flex;
+  gap: 30px; /* Khoảng cách giữa các input ngang */
+  padding-left: 113px;
+  padding-right: 113px;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #989E9C;
+  padding: 8px 11px;
+  border-radius: 9px;
+  width: auto; /* Không cho input chiếm 100% */
+}
+
+.multi-stop-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px; /* Căn theo chiều dọc cho chặng mới */
+  gap: 10px; /* Khoảng cách giữa các input dọc */
+  flex-wrap: wrap;
+}
+
+.add-leg-btn {
+  background-color: #151642;
+  color: #fafbfa;
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  max-width: 160px;
+  margin-left: 113px;
+}
+
+.remove-leg-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 3px 6px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-field {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  border: none;
+  outline: none;
+  width: 100%; /* Đảm bảo input chỉ chiếm chiều rộng của wrapper */
+}
+
+.flight-type-buttons {
+  display: flex;
+  gap: 10px;
+  padding-left: 113px; /* Căn trái */
+  padding-right: 113px; /* Căn phải */
+  margin-bottom: 20px; /* Khoảng cách giữa nút và input */
+}
+
+.flight-type-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.flight-type-button.active {
+  background-color: #151642;
+  color: #FAFBFA;
+  position: relative;
+}
+
+.flight-type-button.inactive {
+  background-color: #EAEAF4;
+  color: #101133;
+}

@@ -1,0 +1,94 @@
+.flight-card-container {
+  width: 100%;  /* Đảm bảo card luôn vừa khít với ticket-bg */
+  max-width: 800px; /* Đảm bảo kích thước tối đa vừa với ticket-bg */
+  margin: 0 auto;   /* Canh giữa */
+  margin-bottom: 16px;
+}
+
+.ticket-bg {
+  width: 100%;
+  height: 200px; /* Căn chỉnh vừa với ticket-bg.png */
+  background-size: cover;  /* Giữ nền khít với kích thước */
+  background-position: center;
+  position: relative;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.info-block {
+  text-align: center;
+}
+
+.label {
+  color: #474A49;
+    font-size: 14px;
+}
+
+.value {
+  color: #151642;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.dash-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.dash {
+  border-top: 2px dashed #252775;
+  opacity: 40%;
+  width: 45%;
+}
+
+.dash.left {
+  margin-right: -10px;
+}
+
+.dash.right {
+  margin-left: -10px;
+}
+
+.plane {
+  width: 40px;
+  height: 40px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.logo {
+  height: 50px;
+}
+
+.price {
+  text-align: right;
+}
+
+.price-label {
+  color: #474A49;
+  font-size: 13px;
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.price-value {
+  color: #2E3192;
+  font-size: 24px;
+  font-weight: bold;
+}

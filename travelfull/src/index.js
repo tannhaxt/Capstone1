@@ -7,15 +7,21 @@ import SearchBar from './Components/Searchbar';
 import Navtab from './Components/Navtab';
 import HeroBanner from './Components/Herobanner';
 import HomePages from './Pages/HomePage';
-import FilterCard from './Components/HotelFilterCard';
 import HotelList from './Components/HotelList';
 import HotelSearchSection from './Components/HotelSearchSection';
-import ResultSearch from './Pages/ResultSearch';
+import HotelSearch from './Pages/HotelSearch';
 import Login from './Components/Login';
+import HotelDetailPage from './Pages/HotelDetailPages';
+import FlightCard from './Components/FlightCard';
+import ListFlightCard from './Components/ListFlightCard';
+import FlightInput from './Components/FlightInput';
+import FlightFilterOptions from './Components/FlightFilterOptions.js';
+import FlightSearch from './Pages/FlightSearch';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login/> {/* Thay đổi từ <App /> sang <Headers /> */}
+    <FlightSearch/> {/* Thay đổi từ <App /> sang <Headers /> */}
   </React.StrictMode>
 );
 
