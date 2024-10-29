@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../fonts.css';
 import logo from '../Images/Logo.png'; // Đảm bảo đường dẫn chính xác
 
-const NavBar = () => {
+const header = () => {
   const navBarStyle = {
     display: 'flex',
     justifyContent: 'flex-start', // Căn các phần tử về phía đầu
@@ -85,4 +85,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default header;

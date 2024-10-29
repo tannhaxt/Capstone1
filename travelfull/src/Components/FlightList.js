@@ -1,8 +1,8 @@
 import React from 'react';
-import FlightCard from './FlightCard'; // Giả định bạn đã có component FlightCard
+import { Link } from 'react-router-dom';
+import FlightCard from './FlightCard';
 
 const FlightList = () => {
-  // Mock data tạm thời cho chuyến bay
   const flights = [
     {
       id: 1,
@@ -11,7 +11,7 @@ const FlightList = () => {
       duration: "1 giờ 30 phút",
       price: "900.000",
       airline: "VietJet Air",
-      logo: "vietjet-logo.png",  // Đường dẫn tới logo của hãng hàng không
+      logo: "vietjet-logo.png",
     },
     {
       id: 2,
@@ -20,17 +20,23 @@ const FlightList = () => {
       duration: "2 giờ",
       price: "1.200.000",
       airline: "Vietnam Airlines",
-      logo: "vna-logo.png",  // Đường dẫn tới logo của hãng hàng không
+      logo: "vna-logo.png",
     },
-    // Thêm nhiều chuyến bay giả khác nếu cần
   ];
 
   return (
     <div className="flight-list">
       {flights.map((flight) => (
-        <FlightCard key={flight.id} flight={flight} />
+        <Link
+          key={flight.id}
+          to={{
+            pathname: `/flight-detail/${flight.id}`,
+            state: { flight: flight },
+          }}
+        >
+          <FlightCard flight={flight} />
+        </Link>
       ))}
-      {/* Pagination (phân trang) */}
     </div>
   );
 };

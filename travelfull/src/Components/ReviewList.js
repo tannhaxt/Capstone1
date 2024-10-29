@@ -1,5 +1,6 @@
+// ReviewsList.js
 import React from 'react';
-import ReviewComponent from '../Components/Review';
+import ReviewComponent from './Review';
 
 const ReviewsList = ({ reviews }) => {
   return (

@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 .flight-card-container {
   width: 100%;  /* Đảm bảo card luôn vừa khít với ticket-bg */
   max-width: 800px; /* Đảm bảo kích thước tối đa vừa với ticket-bg */

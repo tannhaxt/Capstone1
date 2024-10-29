@@ -8,7 +8,7 @@ import Hotel4 from "../Images/Hotel4.jpg";
 import Pic1 from "../Images/Pic1.png";
 import Plane from "../Images/Plane.png";
 
-const TravelCommunity = () => {
+const MainContentHomePage = () => {
   const hotels = [
     {
       image: Hotel1,
@@ -177,4 +177,4 @@ const TravelCommunity = () => {
   );
 };
 
-export default TravelCommunity;
+export default MainContentHomePage;

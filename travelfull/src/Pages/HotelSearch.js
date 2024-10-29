@@ -1,78 +1,80 @@
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
+import { Row, Col } from 'react-bootstrap';
+import { searchHotels } from "../Services/bookingService"; 
 import Header from "../Components/header";
 import FilterBar from "../Components/FilterBar";
-import HotelFilterOptions from "../Components/HotelFilterOptions"; // Importing the hotel filter options
-import HotelList from "../Components/HotelList"; // Assuming this component lists hotels
+import HotelFilterOptions from "../Components/HotelFilterOptions";
+import HotelList from "../Components/HotelList"; 
 import Footer from "../Components/footer";
 
 const HotelSearch = () => {
-  const [activeCategory, setActiveCategory] = useState("hotels");
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const geoId = queryParams.get('geoId');
+
+  const [hotels, setHotels] = useState([]);
+  const [filteredHotels, setFilteredHotels] = useState([]);
   const [filters, setFilters] = useState({});
-  const [hotels, setHotels] = useState([
-    // List of mock hotel data for demonstration
-    { id: 1, name: 'Hotel A', price: 300, rating: 5 },
-    { id: 2, name: 'Hotel B', price: 150, rating: 4 },
-    { id: 3, name: 'Hotel C', price: 500, rating: 3 },
-  ]);
-  const [filteredHotels, setFilteredHotels] = useState(hotels);
+  const [activeCategory, setActiveCategory] = useState("hotels");
 
-  // Handle category change from FilterBar
-  const handleCategoryChange = (value) => {
-    setActiveCategory(value);
-  };
+  useEffect(() => {
+    const fetchHotels = async () => {
+      if (!geoId) {
+        console.error("Missing geoId");
+        return;
+      }
 
-  // Function to handle filter change
+      try {
+        const data = await searchHotels(geoId);
+        console.log("Data from API:", data); // Kiểm tra dữ liệu trả về từ API
+        setHotels(data.data || []); // Sử dụng data.data nếu đó là mảng
+        setFilteredHotels(data.data || []); // Kiểm tra dữ liệu có dạng mảng không
+      } catch (error) {
+        console.error("Lỗi khi lấy danh sách khách sạn:", error);
+      }
+    };
+
+    fetchHotels();
+  }, [geoId]);
+
   const handleFilterChange = (updatedFilters) => {
     setFilters(updatedFilters);
     applyFilters(updatedFilters);
   };
 
-  // Function to apply filters to the hotel list
   const applyFilters = (filters) => {
     let filtered = hotels;
 
-    // Apply price filter
     if (filters.price) {
       filtered = filtered.filter(
-        (hotel) => hotel.price >= filters.price[0] && hotel.price <= filters.price[1]
+        (hotel) => hotel.priceForDisplay >= filters.price[0] && hotel.priceForDisplay <= filters.price[1]
       );
     }
 
-    // Add other filter logics like categories, roomType, rating, promotions, etc.
-
-    setFilteredHotels(filtered); // Update the filtered hotels to display
+    setFilteredHotels(filtered); 
   };
 
   return (
     <div>
-      {/* Header of the page */}
       <Header />
 
-      {/* Content layout */}
       <div style={{ paddingLeft: "112px", paddingRight: "112px" }}>
-        {/* Filter Bar */}
-        <FilterBar onCategoryChange={handleCategoryChange} />
+        <FilterBar onCategoryChange={(category) => setActiveCategory(category)} />
 
-        {/* Hotel category filtering */}
         {activeCategory === "hotels" && (
-          <>
-            <Row className="mt-4">
-              {/* Hotel Filter Options */}
-              <Col md={3}>
-                <HotelFilterOptions onFilterChange={handleFilterChange} />
-              </Col>
+          <Row className="mt-4">
+            <Col md={3}>
+              <HotelFilterOptions onFilterChange={handleFilterChange} />
+            </Col>
 
-              {/* Hotel List */}
-              <Col md={9}>
-                <HotelList hotels={filteredHotels} /> {/* Pass filtered hotels */}
-              </Col>
-            </Row>
-          </>
+            <Col md={9}>
+              <HotelList hotels={filteredHotels} /> 
+            </Col>
+          </Row>
         )}
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

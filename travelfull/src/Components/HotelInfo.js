@@ -5,14 +5,14 @@ const HotelInfo = ({ name, address, reviews }) => {
     <div className="hotel-info">
       <h2>{name}</h2>
       <div className="address d-flex align-items-center">
-        <i style={{paddingRight: '4px'}} className="bi bi-geo-alt-fill"></i>
-        <span>{address}</span>
+        <i style={{ paddingRight: '4px' }} className="bi bi-geo-alt-fill"></i>
+        <span dangerouslySetInnerHTML={{ __html: address }} />
       </div>
       <div className="reviews d-flex align-items-center">
         {[...Array(5)].map((_, idx) => (
           <i key={idx} className="bi bi-star-fill text-success"></i>
         ))}
-        <span style={{paddingLeft: '16px'}}>{reviews} reviews</span>
+        <span style={{ paddingLeft: '16px' }}>{reviews} reviews</span>
       </div>
     </div>
   );

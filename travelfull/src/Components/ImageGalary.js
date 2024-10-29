@@ -1,44 +1,16 @@
 import React from 'react';
 
-const ImageGallery = () => {
+const ImageGallery = ({ mainImage, galleryImages }) => {
   return (
     <div className="image-gallery" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      {/* Phần hiển thị ảnh lớn của khách sạn */}
       <div className="main-image">
-        <img 
-          src="https://via.placeholder.com/755x453" 
-          alt="Hotel main" 
-          style={{ width: '100%', height: 'auto' }} 
-        />
+        <img src={mainImage || "default-main-image-url.png"} alt="Hotel main" style={{ width: '100%', height: 'auto' }} />
       </div>
-
-      {/* Các ảnh nhỏ */}
       <div className="small-images" style={{ display: 'flex', gap: '10px' }}>
-        <img 
-          src="https://via.placeholder.com/231x138" 
-          style={{ width: '20%', height: 'auto' }} 
-          alt="Small image 1" 
-        />
-        <img 
-          src="https://via.placeholder.com/231x138" 
-          style={{ width: '20%', height: 'auto' }} 
-          alt="Small image 2" 
-        />
-        <img 
-          src="https://via.placeholder.com/231x138" 
-          style={{ width: '20%', height: 'auto' }} 
-          alt="Small image 3" 
-        />
-        <img 
-          src="https://via.placeholder.com/231x138" 
-          style={{ width: '20%', height: 'auto' }} 
-          alt="Small image 4" 
-        />
-        <img 
-          src="https://via.placeholder.com/231x138" 
-          style={{ width: '20%', height: 'auto' }} 
-          alt="Small image 5" 
-        />
+        {galleryImages.map((image, index) => {
+          const imageUrl = image ? image.replace("{width}", "300").replace("{height}", "200") : "default-image-url.png";
+          return <img key={index} src={imageUrl} style={{ width: '20%', height: 'auto' }} alt={`Small image ${index + 1}`} />;
+        })}
       </div>
     </div>
   );

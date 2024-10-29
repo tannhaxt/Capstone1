@@ -1,31 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Headers from './Components/header'; // Đảm bảo đường dẫn chính xác
-import reportWebVitals from './reportWebVitals';
-import SearchBar from './Components/Searchbar';
-import Navtab from './Components/Navtab';
-import HeroBanner from './Components/Herobanner';
-import HomePages from './Pages/HomePage';
-import HotelList from './Components/HotelList';
-import HotelSearchSection from './Components/HotelSearchSection';
-import HotelSearch from './Pages/HotelSearch';
-import Login from './Components/Login';
-import HotelDetailPage from './Pages/HotelDetailPages';
-import FlightCard from './Components/FlightCard';
-import ListFlightCard from './Components/ListFlightCard';
-import FlightInput from './Components/FlightInput';
-import FlightFilterOptions from './Components/FlightFilterOptions.js';
-import FlightSearch from './Pages/FlightSearch';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css'; // Nếu bạn có file CSS để áp dụng cho toàn bộ ứng dụng
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <FlightSearch/> {/* Thay đổi từ <App /> sang <Headers /> */}
-  </React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
